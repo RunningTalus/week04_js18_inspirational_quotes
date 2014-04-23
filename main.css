@@ -1,0 +1,25 @@
+/*container*/
+/*nav-bar*/
+/*quote-box*/
+/*userform*/
+
+.container{
+	background-color: LightSkyBlue;
+	color: deeppink;
+	height: 2000px;
+	position: relative;
+	width: 960px;
+}
+
+.nav{
+	width: 940px;
+	height: 50px;
+	background-color: deeppink;
+}
+
+.quotebox{
+	width: 930px;
+	height: 1000px;
+	border: solid;
+	border-color: darkorchid;
+}
