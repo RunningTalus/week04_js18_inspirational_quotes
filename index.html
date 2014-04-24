@@ -11,12 +11,22 @@
 		<div class="user-content">
 			<form id="user-form">
 				<h1>Inspirational Quotes</h1>
-				<label><span>User name: <br></span><input id="user-name" type="text" name="username" placeholder="Enter your username here"></label><br>
-				<label><span>Your quote: <br></span><textarea id="user-quote" type="text" name="userquote" placeholder="Enter your quote here"></textarea><br>
+				
+				<label><span>User name: <br></span><input id="user-name" type="text" name="name" placeholder="Enter your username here"></label><br>
+			
+				<label><span>Your quote: <br></span><textarea id="user-quote" type="text" name="quote" placeholder="Enter your quote here"></textarea><br>
+				
+				<label><span>Rating: (1 is lowest, 5 is highest)</span></label><br>
+				<input type="radio" name="rating" value="1">1
+				<input type="radio" name="rating" value="2">2
+				<input type="radio" name="rating" value="3">3
+				<input type="radio" name="rating" value="4">4
+				<input type="radio" name="rating" value="4">5<br>
 				<input type="submit" class="submit-button" value="Submit Form"></label><br>
+
 			</form>
-		<div class="submitted-quotes">
-			<div class="quote-box">
+		<div id="submitted-quotes" class="notify">
+			<div id="quote-box">
 			</div>
 		</div> 	
 	</div>	
