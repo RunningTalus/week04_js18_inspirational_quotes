@@ -8,8 +8,8 @@
 	.submitted-quotes{}
 		.quote-box*/
 
-.container{
-	background-color: LightSkyBlue;
+#container{
+	background-color: lightskyblue;
 	color: deeppink;
 	height: 2000px;
 	position: relative;
@@ -21,8 +21,8 @@
 }
 
 #user-form {
-	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	/*background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);*/
 	margin:auto;
 	/*position:relative;*/
 	width:960px;
@@ -32,7 +32,7 @@
 	font-style: italic;
 	line-height: 24px;
 	font-weight: bold;
-	color: #09C;
+	/*color: #09C;*/
 	text-decoration: none;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;

@@ -1,26 +1,27 @@
 var data = localStorage.data ?
-	JSON.parse(localStorage.data) :
-	{ quotes: [] };
+						JSON.parse(localStorage.data) :
+						{ quotes: [] };
 
 var Quote = function(username, quote, rating) {
-	this.username = name;
+	this.username = username;
 	// this.author = author;
 	this.quote = quote;
 	this.rating = rating; 
 };
 
 var renderQuotes = function() {
-	$('#quote-box .quote-box').remove();
+	$('#quote-box ').empty();
+	//used to empty localStorage
 
 	for (var i=0; i<data.quotes.length; i++) {
 		var topHat = createNewQuote(data.quotes[i]);
-		$('#quote-box').append(topHat);
+		$('#quote-box').prepend(topHat);
 	}
 };
 
 var createNewQuote = function(quote) {
 	var el = $('<div class="quote">');
-	el.text(quote.username + ' (' + quote.rating + ')');
+	el.text(quote.username + quote.quote + ' (' + quote.rating + ')');
 	return el;
 };
 
@@ -33,7 +34,8 @@ $(document).on('ready', function() {
 
   	var userNameInput = $('#user-form [name="name"]');
   	var userQuoteInput = $('#user-form [name="quote"]');
-  	var userRatingInput = $('#user-form [name="rating"]');
+  	var userRatingInput = $('#user-form [name="rating"]:checked');
+  	//added :checked to get jQuery to recognize radio button value, it was defaulting to 1.
 
   	var userName = userNameInput.val();
   	var userQuote = userQuoteInput.val();
@@ -44,8 +46,8 @@ $(document).on('ready', function() {
   	data.quotes.push(quote);
 
   	data.quotes.sort(function(someQuote1, someQuote2){
-		var name1 = someQuote1.name();
-		var name2 = someQuote2.name();
+		var name1 = someQuote1.username.toUpperCase();
+		var name2 = someQuote2.username.toUpperCase();
 		return name1 > name2 ? 1 :
 									name1 < name2 ? -1 :
 									0;
@@ -56,17 +58,10 @@ $(document).on('ready', function() {
   userNameInput.val('');
   userQuoteInput.val('');
   userRatingInput.val('');
-  	$('#submitted-quotes').text("Testing").delay(3000).slideDown();
+  	$('#submitted-quotes').text("This worked").delay(3000).slideDown();
   renderQuotes();
 
   return false;
+
 	});
 });
-
-// localStorage.test = 'Hello'
-//localStorage stores everything as strings
-//localStorage.test = JSON.stringify([1,2,3]);
-//logs"[1,2,3]"
-//JSON.parse(localStorage.test)
-//logs [1,2,3]
-//attribute selector from forms '[name="name"]'
