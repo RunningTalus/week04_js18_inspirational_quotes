@@ -7,25 +7,24 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="container">
-	<h1>Inspirational Quotes</h1>
-		<div class="nav" navrole="navigation">
-<!-- 		<ul>
-			<li>Login</li>
-			<li>About Us</li>
-			<li>Popular Quotes</li>
-			<li>Recent Quotes</li>
-		</ul> -->
-		</div>
-		<div class="quotebox">
-			<form name="userform">
-			<textarea class="userquote" placeholder="Add your quote here!" rows="4" cols="100"></textarea><br>
-			<button id="submitquote" type="button">Submit this quote!</button>
+	<div id="container">
+		<div class="user-content">
+			<form id="user-form">
+				<h1>Inspirational Quotes</h1>
+				<label><span>User name: <br></span><input id="user-name" type="text" name="username" placeholder="Enter your username here"></label><br>
+				<label><span>Your quote: <br></span><textarea id="user-quote" type="text" name="userquote" placeholder="Enter your quote here"></textarea><br>
+				<input type="submit" class="submit-button" value="Submit Form"></label><br>
 			</form>
-		</div>
+		<div class="submitted-quotes">
+			<div class="quote-box">
+			</div>
+		</div> 	
+	</div>	
+	
 	</div>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="main.js"></script>
 
 </body>
 </html>
+
