@@ -55,6 +55,19 @@ $(document).on('ready', function() {
 										0;
 		});
 
+
+	});
+
+	// $('.sort-quote').on('submit', function(){ 
+	// data.quotes.sort(function(q1, q2){
+	// var quoteSort1 = q1.quote.toUpperCase();
+	// var quoteSort2 = q2.quote.toUpperCase();
+	// //ternary selector to alphabetize quotes
+	// return q1 < q2 ? 1 :
+	// 							q1 > q2 ? -1 :
+	// 							0;
+	// });
+
   localStorage.data = JSON.stringify(data);
 
   userNameInput.val('');

@@ -77,4 +77,21 @@ Handlebars
 http://handlebarsjs.com/
 
 
+//Style .quote with fields on separate lines
+//
+
+//enable sort by rating
+//enable sort by userName
+//enable sort by userQuote
+
+//remove star rating at quote creation
+
+//allow users to assign stars
+	//on hover
+//allow users to delete posts
+
+//re-style for RWD
+//re-style using Twitter Bootstrap
+
+
 
