@@ -11,7 +11,7 @@ var Quote = function(username, quote, rating) {
 
 var renderQuotes = function() {
 	$('#quote-box ').empty();
-	//used to empty localStorage
+	//used to empty THE QUOTEBOX
 
 	for (var i=0; i<data.quotes.length; i++) {
 		var alphabetize = createNewQuote(data.quotes[i]);
@@ -21,7 +21,9 @@ var renderQuotes = function() {
 
 var createNewQuote = function(quote) {
 	var el = $('<div class="quote">');
-	el.text(quote.username + quote.quote + ' (' + quote.rating + ')');
+	// el.text(quote.username + quote.quote + ' (' + quote.rating + ')');
+	//this was working
+	el.text("Username: " + quote.username + ", " + "\n" + " User Quote: " + quote.quote + ", " + "\n" + "Quote Rating: " + ' (' + quote.rating + ')' + "\n");
 	return el;
 };
 
@@ -40,7 +42,6 @@ $(document).on('ready', function() {
   	var userName = userNameInput.val();
   	var userQuote = userQuoteInput.val();
   	var userRating = userRatingInput.val();
-
   	var quote = new Quote(userName, userQuote, userRating);
   	
   	data.quotes.push(quote);
@@ -48,8 +49,9 @@ $(document).on('ready', function() {
 	  	data.quotes.sort(function(someQuote1, someQuote2){
 			var name1 = someQuote1.username.toUpperCase();
 			var name2 = someQuote2.username.toUpperCase();
-			return name1 > name2 ? 1 :
-										name1 < name2 ? -1 :
+			//ternary selector to alphabetize usernames
+			return name1 < name2 ? 1 :
+										name1 > name2 ? -1 :
 										0;
 		});
 

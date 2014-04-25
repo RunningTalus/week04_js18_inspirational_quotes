@@ -9,41 +9,29 @@
 		.quote-box*/
 
 #container{
-	background-color: lightskyblue;
-	color: deeppink;
-	height: 2000px;
-	position: relative;
+	background-color: #2980b9;
+/*	border: dashed;
+	border-color: orange;*/
+	color: #f1c40f;
+	height: 3000px;
+	padding: 10px;
 	width: 960px;
 }
 
 .user-content{
-	position: absolute;
+	border: 0px;
+	margin: 0px;
+	padding: 10px;
 }
 
 #user-form {
-	/*background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);*/
-	margin:auto;
-	/*position:relative;*/
-	width:960px;
+	border:solid;
+	border-color:#f1c40f;
 	height:400px;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 14px;
-	font-style: italic;
-	line-height: 24px;
-	font-weight: bold;
-	/*color: #09C;*/
-	text-decoration: none;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
 	padding:10px;
-	border: 1px solid #999;
-	border: inset 1px solid #333;
-	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	width:920px;
 }
+
 #user-name{
 	width: 250px;
 }
@@ -56,14 +44,27 @@ textarea{
 #submitted-quotes{
 	height: 1000px;
 	width: 940px;
-	border: solid;
-	border-color: deeppink;
-	position: absolute;
 }
+
 #quote-box{
 	height: 300px;
-	width: 900px;
+	width: 920px;
+	/*border: solid;
+	border-color: #f1c40f;*/
+	padding: 10px;	
+}
+
+.quote{
+	background-color: ;
 	border: solid;
-	border-color: blue;
-	position: absolute;
+	border-color: #f1c40f;
+	border-radius: 10px;
+	color: #f1c40f;	
+	font-family: helvetica;
+	font-style: italic;
+	font-weight: bold;
+	height: 100px;
+	margin: 10px;
+	padding: 00px;
+	width: 700px;
 }

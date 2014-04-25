@@ -9,7 +9,6 @@
 <body>
 	<div id="container">
 		<div class="user-content">
-			
 			<form id="user-form">
 				<h1>Inspirational Quotes</h1>
 				
@@ -17,22 +16,28 @@
 			
 				<label><span>Your quote: <br></span><textarea id="user-quote" type="text" name="quote" placeholder="Enter your quote here"></textarea><br>
 				
-				<label><span>Rating: (1 is lowest, 5 is highest)</span></label><br>
-				<input type="radio" name="rating" value="1">1
-				<input type="radio" name="rating" value="2">2
-				<input type="radio" name="rating" value="3">3
-				<input type="radio" name="rating" value="4">4
-				<input type="radio" name="rating" value="4">5<br>
+				<label><span>Rating: (1 is lowest, 5 is highest. ☆☆☆☆☆)</span></label><br>
+				<input type="radio" name="rating" value="☆">1
+				<input type="radio" name="rating" value="☆☆">2
+				<input type="radio" name="rating" value="☆☆☆">3
+				<input type="radio" name="rating" value="☆☆☆☆">4
+				<input type="radio" name="rating" value="☆☆☆☆☆">5<br>
 				<input type="submit" class="submit-button" value="Submit Form"></label><br>
 			</form>
 
-			<div id="submitted-quotes" class="notify">
-				<div id="quote-box">
-				</div>
-			</div>
+			
+			<button><input type="submit" class="sort-quote" value="Sort by Quote"></button>
+			<button><input type="submit" class="sort-rating" value="Sort by Rating"></button>
+			<button><input type="submit" class="sort-time" value="Sort by Time"></button>
+			<button><input type="submit" class="sort-user" value="Sort by Username"></button>
 
 		</div>	
-	</div>
+
+		<div id="submitted-quotes" class="notify">
+			<div id="quote-box">
+			</div>
+		</div>
+	</div>	
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="main.js"></script>
 
