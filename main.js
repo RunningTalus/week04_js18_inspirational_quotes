@@ -14,8 +14,8 @@ var renderQuotes = function() {
 	//used to empty localStorage
 
 	for (var i=0; i<data.quotes.length; i++) {
-		var topHat = createNewQuote(data.quotes[i]);
-		$('#quote-box').prepend(topHat);
+		var alphabetize = createNewQuote(data.quotes[i]);
+		$('#quote-box').prepend(alphabetize);
 	}
 };
 
@@ -45,20 +45,22 @@ $(document).on('ready', function() {
   	
   	data.quotes.push(quote);
 
-  	data.quotes.sort(function(someQuote1, someQuote2){
-		var name1 = someQuote1.username.toUpperCase();
-		var name2 = someQuote2.username.toUpperCase();
-		return name1 > name2 ? 1 :
-									name1 < name2 ? -1 :
-									0;
-	});
+	  	data.quotes.sort(function(someQuote1, someQuote2){
+			var name1 = someQuote1.username.toUpperCase();
+			var name2 = someQuote2.username.toUpperCase();
+			return name1 > name2 ? 1 :
+										name1 < name2 ? -1 :
+										0;
+		});
 
   localStorage.data = JSON.stringify(data);
 
   userNameInput.val('');
   userQuoteInput.val('');
   userRatingInput.val('');
-  	$('#submitted-quotes').text("This worked").delay(3000).slideDown();
+  	// $('#submitted-quotes').text("").delay(3000).slideDown();
+  	// this was working but required a refresh to render
+
   renderQuotes();
 
   return false;
