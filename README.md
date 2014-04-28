@@ -93,5 +93,7 @@ http://handlebarsjs.com/
 //re-style for RWD
 //re-style using Twitter Bootstrap
 
+//localStorage.clear();
+
 
 
