@@ -55,6 +55,7 @@ $(document).on('ready', function() {
 										0;
 		});
 
+	 
 
 		
 
@@ -81,6 +82,34 @@ $(document).on('ready', function() {
 	  return false;
 
 	});
+
+	$('.sort-quote').on('click', function(){
+	  $(this).remove();
+	});
+
+	$('.sort-rating').on('click', function(){
+		var userNameTxt = $('#user-name').val();
+		var userQte = $('#user-quote').val();
+		$('#user-quote').val(userNameTxt);
+		// console.log(userNameTxt);
+		$('#user-name').val(userQte);
+		// console.log(userQte);
+	})
+
+	$('.sort-time').on('click', function(){
+		var textcontest = $('#user-name').val();
+		
+		var loopFunc = function(param){
+			var names = "";
+			for (var i=0; i<param; i++){
+				names += textcontest + " ";
+			}
+			$('#user-quote').val(names);
+		};
+		loopFunc(3);
+	});
+
+	//swap #user-name and #user-quote text fields
 });
 
 
